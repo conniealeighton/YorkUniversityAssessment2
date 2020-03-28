@@ -30,10 +30,13 @@ public class SystemTestGUI
         boolean displayBox = false;
 
         String input = (String) JOptionPane.showInputDialog
-                (
-                        null, "Please make a selection to develop the computer system", "developmentOptions", JOptionPane.QUESTION_MESSAGE, null,
-                        possibilities, possibilities[0]
-                );
+        (
+          null, "Please make a selection to develop the computer system", "developmentOptions", JOptionPane.QUESTION_MESSAGE, null,
+           possibilities, possibilities[0]
+        );
+
+
+        // Any outputs are displayed in both a JOptionPane dialogue box and on the console
 
         if (input.equals("Print System Details"))
         {
@@ -91,6 +94,6 @@ public class SystemTestGUI
 
 
     }
-}
+  }
 }
 
