@@ -51,7 +51,7 @@ public class System {
     {
 
         String details = String.format(
-                "Make: %s \n Model: %s \n Processor Speed: %s \n Memory Size: %s \n Hard Disk Size: %s \n Purchase Cost: %s",
+                "Make: %s \n Model: %s \n Processor Speed: %s \n Memory Size: %s \n Hard Disk Size: %s \n Purchase Cost: £%s",
                 getMake(), getModel(), getProcessorSpeed(), memorySize, hardDiskSize, purchaseCost);
 
 
@@ -70,17 +70,13 @@ public class System {
 
     public boolean goodMemorySize()
     {
-        if (memorySize < 128)
-        {
-            return false;
-        }
-        else return true;
+        return (memorySize >= 128);
     }
 
     public String diagnoseSystem()
     {
-        String details = String.format("Hard Disk Size: %s \n Memory Size OK: %s", checkHDStatus(), goodMemorySize());
-        return details;
+        return String.format("Hard Disk Size = %s \n Memory Size OK = %s", checkHDStatus(), goodMemorySize());
+
     }
 
     public String displaySystemProperties()
